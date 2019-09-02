@@ -239,7 +239,7 @@ class TestCavityMap(unittest.TestCase):
     def test__isCaviyWhenIsFalse(self):
         self.assertFalse(
             cm._isCavity(
-                ['1112', '1912', '1892', '1234'], 2, 1
+                ['1912', '1912', '1892', '1234'], 2, 1
             )
         )
 
