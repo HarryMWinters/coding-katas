@@ -54,7 +54,8 @@ def _isCavity(grid, rowNumber, colNumber):
         int(grid[rowNumber + 1][colNumber]),
         int(grid[rowNumber - 1][colNumber]),
     ]
-    if val >= max(neighboors):
+
+    if val > max(neighboors):
         return True
     else:
         return False
