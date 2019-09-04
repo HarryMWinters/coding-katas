@@ -1,0 +1,26 @@
+def bonetrousle(targetSum, maxValue, choices):
+    """
+    Generate a list of of string with 'cavities' replaced by the the uppercase letter X.
+    See README for fuller description of cavity.
+
+    Args:
+        sumRequired: An integer value specifying the sum of the returned elements
+        maxValue: An integer value specifying the max value of a returned element
+        valuesRequired: The number of elements that must be returned.
+    Returns:
+        A list of ints whose sum is sumRequired and whose length is lengthRequired.
+    Raises:
+        AttributeError: if non ints are passed in as paramters.
+    """
+    maxPossible = (choices / 2) * ((maxValue - choices + 1) + maxValue)
+    minPossible = (choices / 2) * (1 + choices)
+    if minPossible > targetSum or targetSum > maxPossible:
+        return [-1]
+    sol = [i + 1 for i in range(choices)]
+    i = 1
+    maxBump = maxValue - choices
+    while sum(sol) < targetSum:
+        #print(f"sol = {sol}\nsum = {sum(sol)}\ntargetSum = {targetSum}")
+        sol[-i] += min(targetSum - sum(sol), maxBump)
+        i += 1
+    return sol
