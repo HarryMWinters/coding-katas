@@ -11,13 +11,8 @@ Note: The **_head_** pointer may be null, indicating that the list is empty. Be 
 
 ## Function Description
 
-Lorem ipsum dolor
+Take a linked list of nodes with data in non-decreasing order.
 
 ## Constraints
 
-- foo <= bar
-- erc.
-
-## Output Format
-
-A lorem ispum dolor data struct.
+The data elements of the linked list argument will always be in non-decreasing order.

@@ -12,9 +12,11 @@ test_data = [
 
 class TestDeleteDuplicates(unittest.TestCase):
 
-    def test__levelOrderSearch(self):
+    def test_deleteDuplicates(self):
         for case in test_data:
             tree, head = self._makeTree(case["input"])
+            tree.removeDuplicates(head)
+        tree.display(head)
         self.assertEqual(
             case["solution"],
             tree.toPyList(head))

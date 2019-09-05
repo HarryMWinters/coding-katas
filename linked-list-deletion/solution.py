@@ -14,16 +14,22 @@ class MySolution(scaffold.Solution):
             current = current.next
         return outList
 
-    def removeDuplicates(self, param1, param2):
+    def removeDuplicates(self, head):
         """
-        Return a value that solves the challange.
+        Return None. Remove nodes with duplicate data from 
+        the linked list whose head is the parameter head.
 
         Args:
-            param1: A(n) type(param1), explanation...
-            price2: A(n) type(param2), explanation...
+            head: The node at the head of the linked list to be check.
         Returns:
-        A solution of type type(solution)
+            Reference to head of list, a Node object.
         Raises:
             (someTypeOf)Error: if things go wrong.
         """
-        pass
+        originalHead = head
+        while head and head.next:
+            if head.data == head.next.data:
+                head.next = head.next.next
+            else:
+                head = head.next
+        return originalHead
