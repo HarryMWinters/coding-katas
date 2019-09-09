@@ -4,13 +4,12 @@ import solution as s
 test_data = [
     {
         "input": [10, [2, 1, 3], [7, 8, 10]],
-        # k, A, B
         "solution": True
     },
-    # {
-    #     "input": [5, [1, 2, 2, 1], [3, 3, 3, 4]],
-    #     "solution": False
-    # },
+    {
+        "input": [5, [1, 2, 2, 1], [3, 3, 3, 4]],
+        "solution": False
+    },
 ]
 
 

@@ -12,10 +12,11 @@ test_data = [
 
 class TestMarkAndToys(unittest.TestCase):
     def test__func(self):
-        for case in test_data:
-            self.assertTrue(
-                case["solution"],
-                s.func(case["input"])
+        A, B, C = case["input"][0], case["input"][1], case["input"][2]
+        with self.subTest(f"\n\A = {A}\n\tB = {B}\n\tC = {C}\n"):
+            self.assertEqual(
+                set(case["solution"]),
+                set(s.func(A, B, C))
             )
 
 
