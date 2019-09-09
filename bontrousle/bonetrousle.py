@@ -1,7 +1,7 @@
 def bonetrousle(targetSum, maxValue, choices):
     """
-    Generate a list of of string with 'cavities' replaced by the the uppercase letter X.
-    See README for fuller description of cavity.
+    If possbale retuen Aalist of ints whose sum is sumRequired and whose length is lengthRequired.
+    See URL in README for fuller description.
 
     Args:
         sumRequired: An integer value specifying the sum of the returned elements
@@ -19,6 +19,7 @@ def bonetrousle(targetSum, maxValue, choices):
     sol = [i + 1 for i in range(choices)]
     i = 1
     maxBump = maxValue - choices
+    # TODO Keep track of sum and decrement it instead of calling it each time.
     while sum(sol) < targetSum:
         #print(f"sol = {sol}\nsum = {sum(sol)}\ntargetSum = {targetSum}")
         sol[-i] += min(targetSum - sum(sol), maxBump)
