@@ -15,18 +15,18 @@ def acmTeam(topicArr):
     def _countOnes(binaryNumber):
         return bin(binaryNumber).count("1")
 
-    maxSkillzBin, permutationWithMax = 0, 0
+    maxSkillzBin = permutationWithMax = 0
     while topicArr:
         competitor = topicArr[0]
 
         for otherCompetitor in topicArr[1:]:
             binarySkillzSum = int(competitor, 2) | int(otherCompetitor, 2)
-            if binarySkillzSum > maxSkillzBin:
+            if _countOnes(binarySkillzSum) > _countOnes(maxSkillzBin):
                 maxSkillzBin = binarySkillzSum
                 permutationWithMax = 1
-            elif binarySkillzSum == maxSkillzBin:
+            elif _countOnes(binarySkillzSum) == _countOnes(maxSkillzBin):
                 permutationWithMax += 1
 
         topicArr = topicArr[1:]
-    print(bin(maxSkillzBin))
+
     return [_countOnes(maxSkillzBin), permutationWithMax]

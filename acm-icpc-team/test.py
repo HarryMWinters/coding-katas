@@ -29,8 +29,11 @@ test_data = [
         "input": [
             "00000",
             "00000",
+            "00000",
+            "00000",
+            "00000",
         ],
-        "solution": [0, 1]
+        "solution": [0, 10]
     },
     {
         "input": [line.strip() for line in open("test-data.txt")],
