@@ -1,6 +1,6 @@
 # PROBLEM_NAME
 
-URL - http://...
+URL - https://www.hackerrank.com/challenges/PROBLEM_NAME/problem
 
 Lorem ipsim dolor
 
