@@ -1,6 +1,6 @@
-# PROBLEM_NAME
+# %%CHALLANGE_NAME%%
 
-URL - https://www.hackerrank.com/challenges/PROBLEM_NAME/problem
+URL - https://www.hackerrank.com/challenges/%%CHALLANGE_NAME%%/problem
 
 Lorem ipsim dolor
 

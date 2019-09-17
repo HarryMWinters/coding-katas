@@ -14,4 +14,7 @@ def taumBday(b, w, bc, wc, z):
     Raises:
         (someTypeOf)Error: if things go wrong.
     """
-    return 0
+    minBlackCost = min([bc, z+wc])
+    minWhiteCost = min([wc, z+bc])
+
+    return b * minBlackCost + w * minWhiteCost

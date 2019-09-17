@@ -15,8 +15,16 @@ fi
 
 echo "Creating new directory: " $CHALLANGE_NAME
 mkdir $CHALLANGE_NAME
-echo "Using: " $LANGUAGE
-cp -r _solution-template/ $CHALLANGE_NAME/
-${SED} -i "" -e "s/%%CHALLANGE_NAME%%/${CHALLANGE_NAME}/g" ${CHALLANGE_NAME}/README.md
-${SED} -i "" -e "s/%%CHALLANGE_NAME%%/${CHALLANGE_NAME}/g" ${CHALLANGE_NAME}/solution.py
-${SED} -i "" -e "s/%%CHALLANGE_NAME%%/${CHALLANGE_NAME}/g" ${CHALLANGE_NAME}/test.py
+
+if [[$LANGUAGE == "Python3"]]
+    echo "Using: " $LANGUAGE
+    cp -r _solution-template/ $CHALLANGE_NAME/
+    sed -i "" -e "s/%%CHALLANGE_NAME%%/${CHALLANGE_NAME}/g" ${CHALLANGE_NAME}/README.md
+    sed -i "" -e "s/%%CHALLANGE_NAME%%/${CHALLANGE_NAME}/g" ${CHALLANGE_NAME}/solution.py
+    sed -i "" -e "s/%%CHALLANGE_NAME%%/${CHALLANGE_NAME}/g" ${CHALLANGE_NAME}/test.py
+fi
+
+else
+    echo "No language selected. Exiting"
+    exit 1
+fi
