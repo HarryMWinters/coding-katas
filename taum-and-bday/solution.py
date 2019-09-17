@@ -12,7 +12,7 @@ def taumBday(b, w, bc, wc, z):
     Returns:
        A non-negative integer.
     Raises:
-        (someTypeOf)Error: if things go wrong.
+       TypeError: if params are not integers or floats. 
     """
     minBlackCost = min([bc, z+wc])
     minWhiteCost = min([wc, z+bc])

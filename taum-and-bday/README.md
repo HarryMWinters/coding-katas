@@ -23,11 +23,6 @@ taumBday has the following parameter(s):
 - wc: the cost of a white gift
 - z: the cost to convert one color gift to the other color
 
-## Constraints
-
-- foo <= bar
-- erc.
-
 ## Output Format
 
-A lorem ispum dolor data struct.
+A non negative integer.
