@@ -1,10 +1,7 @@
 package solution
 
-import "fmt"
-
-// Complete the twoStrings function below.
+// Should return true if s1 and s2 have a common substring
 func twoStrings(s1 string, s2 string) bool {
-	// Should return true if s1 and s2 have a common substring
 
 	// These could run concurrently
 	s1LettersSet := makeRuneSet(s1)
@@ -19,7 +16,6 @@ func twoStrings(s1 string, s2 string) bool {
 func doIntersect(runeSet1 map[rune]bool, runeSet2 map[rune]bool) bool {
 	for r := range runeSet1 {
 		if runeSet2[r] {
-			fmt.Printf("%c", r)
 			return true
 		}
 	}
