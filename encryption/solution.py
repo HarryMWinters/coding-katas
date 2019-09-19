@@ -1,12 +1,11 @@
-def encryption(param1, param2):
+def encryption(param1):
     """
-    Return a value that solves the challange.
+    Return and encrypted string.
 
     Args:
-        param1: A(n) type(param1), explanation...
-        price2: A(n) type(param2), explanation...
+        param1: An input string of asci characters.
     Returns:
-       A solution of type type(solution)
+       A string of the encrypted input.
     Raises:
         (someTypeOf)Error: if things go wrong.
     """
