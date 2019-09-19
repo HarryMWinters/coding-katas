@@ -10,4 +10,10 @@ def alternatingCharacters(string):
     Raises:
         (someTypeOf)Error: if things go wrong.
     """
-    return -1
+    delCount = 0
+    i = 1
+    while i < len(string):
+        if string[i] == string[i - 1]:
+            delCount += 1
+        i += 1
+    return delCount

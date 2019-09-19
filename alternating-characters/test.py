@@ -23,6 +23,10 @@ test_data = [
         "input": "AAABBB",
         "solution": 4
     },
+    {
+        "input": "AAABAAA",
+        "solution": 4
+    }
 ]
 
 
