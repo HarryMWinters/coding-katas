@@ -1,8 +1,1 @@
-{
-  "PASCAL": "FooBarBaz",
-  "PROPERCAP": "Foo Bar Baz",
-  "UNDERCAP": "Foo_Bar_Baz",
-  "CAMEL": "fooBarBaz",
-  "LOWUNDER": "foo_bar_baz",
-  "KEBAB": "foo-bar-baz"
-}
+{"PASCAL": "Encryption", "PROPERCAP": "Encryption", "UNDERCAP": "Encryption", "CAMEL": "encryption", "LOWUNDER": "encryption", "KEBAB": "encryption"}

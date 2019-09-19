@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CHALLANGE_NAME=$1
-./NameParser.py ${CHALLANGE_NAME} --outputFile _tempNameFile
+./NameParser.py ${CHALLANGE_NAME} --outputFile _tempNames.json
 PROPERCAP_NAME=$(cat _tempNames.json | jq --raw-output ".PROPERCAP")
 PASCAL_NAME=$(cat _tempNames.json | jq --raw-output ".PASCAL")
 UNDERCAP_NAME=$(cat _tempNames.json | jq --raw-output ".UNDERCAP")

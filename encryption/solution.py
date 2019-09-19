@@ -1,4 +1,4 @@
-def fooBarBaz(param1, param2):
+def encryption(param1, param2):
     """
     Return a value that solves the challange.
 

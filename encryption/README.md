@@ -1,6 +1,6 @@
-# Foo Bar Baz
+# Encryption
 
-URL - https://www.hackerrank.com/challenges/foo-bar-baz/problem
+URL - https://www.hackerrank.com/challenges/encryption/problem
 
 Lorem ipsim dolor
 
