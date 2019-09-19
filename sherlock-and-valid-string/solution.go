@@ -4,6 +4,8 @@ import (
 	"math"
 )
 
+// isValid check whether an input string meets the "sherlock" criteries specifed in the ReadMe
+// and returns true if it does and false if it does not.
 func isValid(s string) bool {
 
 	lettersSet := makeRuneSet(s)
@@ -29,6 +31,7 @@ func isValid(s string) bool {
 	return true
 }
 
+// makeRuneSet creates a map of rune frequencies in a given input string. I.E. {s: 2, h: 4} for "sshhhh"
 func makeRuneSet(s string) map[rune]int {
 	letterSet := map[rune]int{}
 	for _, letter := range s {
