@@ -1,4 +1,7 @@
-def encryption(param1):
+import math
+
+
+def encryption(string):
     """
     Return and encrypted string.
 
@@ -9,4 +12,20 @@ def encryption(param1):
     Raises:
         (someTypeOf)Error: if things go wrong.
     """
-    return None
+    rowLength = math.ceil(math.sqrt(len(string)))
+    matrix = []
+    for i, val in enumerate(string):
+        if i % rowLength == 0:
+            matrix.append([val])
+        else:
+            matrix[-1].append(val)
+
+    encodedWordist = []
+    for i in range(rowLength):
+        word = []
+        for j in matrix:
+            if i < len(j):
+                word.append(j[i])
+        encodedWordist.append("".join(word))
+
+    return " ".join(encodedWordist)
