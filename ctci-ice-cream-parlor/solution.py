@@ -11,4 +11,11 @@ def ctciIceCreamParlor(money, costArr):
     Raises:
         (someTypeOf)Error: if things go wrong.
     """
-    return [1, 2]
+    complementMap = dict()
+    for i, price in enumerate(costArr):
+        if complementMap.get(price) is not None:
+            return [complementMap[price] + 1, i + 1]
+        else:
+            complementMap[money - price] = i
+    raise(ValueError(f"No complementary prices in costArr.\n\
+                     complement map={complementMap}"))
