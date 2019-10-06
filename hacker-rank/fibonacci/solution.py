@@ -11,4 +11,9 @@ def fibonacci(n):
     elif n == 1:
         return 1
     else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+        fibonacci_list = [0, 1]
+        # n + 1 to account for zero based indexing
+        while len(fibonacci_list) < n + 1:
+            fibonacci_list.append(
+                fibonacci_list[-1] + fibonacci_list[-2])
+        return fibonacci_list[-1]

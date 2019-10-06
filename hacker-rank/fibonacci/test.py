@@ -33,14 +33,14 @@ test_data = [
     },
 
     # These work but take forever.
-    # {
-    #     "input": 35,
-    #     "solution": 9227465
-    # },
-    # {
-    #     "input": 37,
-    #     "solution": 24157817
-    # },
+    {
+        "input": 35,
+        "solution": 9227465
+    },
+    {
+        "input": 37,
+        "solution": 24157817
+    },
 ]
 
 
