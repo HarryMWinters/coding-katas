@@ -12,27 +12,25 @@ def countTriplets(ratio, arr):
         (someTypeOf)Error: if things go wrong.
     """
     primary_elements = {}
-    # {element: [indeces]}
     secondary_elements = {}
     triplet_count = 0
     for val in arr:
-
         if val % ratio == 0:
-            # Check if it's a final element
-            if secondary_elements.get(val / ratio):
-                triplet_count += (secondary_elements.get(val / ratio)
-                                  * primary_elements.get(val / ratio**2))
-            # Check if it could be a second element
+            # If val completes triplet
+            triplet_count += secondary_elements.get(val / ratio, 0)
+            # If val completes doublet
             if primary_elements.get(val / ratio):
-                if secondary_elements.get(val) is None:
-                    secondary_elements[val] = 1
+                if secondary_elements.get(val):
+                    secondary_elements[val] += \
+                        primary_elements.get(val / ratio)
                 else:
-                    secondary_elements[val] += 1
+                    secondary_elements[val] = \
+                        primary_elements.get(val / ratio)
 
-        # Add it to possible first elements of progression.
-        if primary_elements.get(val) is None:
-            primary_elements[val] = 1
-        else:
+        # Single val
+        if primary_elements.get(val):
             primary_elements[val] += 1
+        else:
+            primary_elements[val] = 1
 
     return triplet_count

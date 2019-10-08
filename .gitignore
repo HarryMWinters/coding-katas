@@ -1,2 +1,4 @@
 __pycache__
-_tempNames.json
+._tempNames.json
+.vscode
+.gitignore
