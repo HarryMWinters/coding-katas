@@ -19,8 +19,6 @@ var solutionTests = []struct {
 	{[]int{9, 10}, 10},
 	{[]int{-1, -1, -1}, 0},
 	{[]int{-1, -1, -1, 4}, 4},
-	// {[]int{}, },
-	// {[]int{}, },
 }
 
 func TestAbs(t *testing.T) {
